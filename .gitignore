@@ -1,0 +1,14 @@
+node_modules
+.env
+.DS_STORE
+
+# Graph cli generated
+generated/
+build/
+
+# matchstick
+tests/.*
+matchstick
+
+# Docker
+data/

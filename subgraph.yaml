@@ -1,0 +1,25 @@
+specVersion: 0.0.4
+description: Randomly generated avatar NFTs auctioned daily.
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: NounsDAOV4
+    source:
+      abi: NounsDAOV4
+      address: "0x35d2670d7c8931aacdd37c89ddcb0638c3c44a57"
+      startBlock: 3594846
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      file: ./src/nouns-dao.ts
+      entities:
+        - Vote
+      abis:
+        - name: NounsDAOV4
+          file: ./abis/NounsDAOLogicV4.json
+      eventHandlers:
+        - event: VoteCast(indexed address,uint256,uint8,uint256,string)
+          handler: handleVoteCast
+    network: sepolia

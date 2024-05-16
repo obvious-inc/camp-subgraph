@@ -1,0 +1,14 @@
+{
+  "mainnet": {
+    "NounsDAOV4": {
+      "address": "0x6f3E6272A167e8AcCb32072d08E0957F9c79223d",
+      "startBlock": 19359720
+    }
+  },
+  "sepolia": {
+    "NounsDAOV4": {
+      "address": "0x35d2670d7c8931aacdd37c89ddcb0638c3c44a57",
+      "startBlock": 3594846
+    }
+  }
+}
